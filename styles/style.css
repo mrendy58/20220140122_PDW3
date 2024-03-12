@@ -1,0 +1,38 @@
+body{ /** mengubah background browser**/
+    background: rgb(240, 240, 240)
+}
+.grid{ /** mendekorasi bagian layout**/
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin: 80px;
+    align-items: center;
+    grid-gap: 30px;
+}
+img{ /** untuk menyesuaikan gambar agar tdk terlalu zoom**/
+    object-fit: cover;
+}
+.grid > article{ /** mendekorasi bagian layout shadow, radius border, dll **/
+    box-shadow: 7px 5px 5px 0px black;
+    border-radius: 30px;
+    text-align: center;
+    text-decoration-color: #666;
+    background: #ffffff;
+    width: 300px;
+    transition: transform;
+}
+.grid > article img{ /** untuk menyesuaikan radius border pada gambar**/
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+.grid > article:hover{ /** membuat objek lebih responsif**/
+    /**transform: rotate(15deg);**/
+    transform: scale(0.5); /** zoom out 
+    /**transform: scale(1.2);**/
+    /*8transform: translate(50px); /** geser **/
+}
+/** mengubah tampilan browser agar lebih responsif**/
+@media (max-width: 1000px){
+    .grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
