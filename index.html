@@ -5,9 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
     <title>Pertemuan 3 PDW 2024</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     
 </head>
 <body>
+    <p id="waktu"></p>
+    <div class="login-form">
+        <h2>Login</h2>
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+            <button type="button" onclick="login()">Login</button>
+        </form>
+    </div>
+    <script>
+        function login() {
+            
+            Swal.fire({
+                title: "Login Success",
+                text: "Berhasil",
+                icon: "success"
+            });
+        }
+
+        const waktu = document.getElementById("waktu");
+
+        function tanggal(){
+            const date = new Date();
+            waktu.innerHTML = date;
+        }
+
+        setInterval(tanggal, 1000);
+        tanggal();
+    </script>
+    <script src = "./script/main.js"></script>
+
     <div class = "container"> 
         <main class = "grid">
             <article>
